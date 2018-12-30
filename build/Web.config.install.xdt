@@ -2,7 +2,11 @@
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
     <episerver.shell>
         <protectedModules>
-            <add name="EpiImagePoint" xdt:Locator="Match(name)" xdt:Transform="Remove" />
+            <add name="ImagePointEditor" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing">
+                <!--<assemblies>
+                    <add assembly="ImagePointEditor" />
+                </assemblies>-->
+            </add>
         </protectedModules>
     </episerver.shell>
 </configuration>

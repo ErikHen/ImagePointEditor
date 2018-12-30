@@ -5,17 +5,17 @@
     <version>1.0</version>
     <authors>Erik Henningson</authors>
     <owners>Erik Henningson</owners>
-	<projectUrl>https://github.com/ErikHen/EpiImagePoint</projectUrl>
+	<projectUrl>https://github.com/ErikHen/ImagePointEditor</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Image point property editor for Episerver CMS</description>
     <releaseNotes></releaseNotes>
     <tags>Episerver CMS</tags>
     <dependencies>
-	    <dependency id="EPiServer.CMS.UI.Core" version="11.1.0" />
+	    <dependency id="EPiServer.CMS.UI.Core" version="[11.1, 12.0)" />
     </dependencies>
   </metadata>
   <files>
-	<file src="..\ImagePointEditor.zip" target="content\modules\_protected\ImagePointEditor\" />
+	<file src="..\output\ImagePointEditor.zip" target="content\modules\_protected\ImagePointEditor\" />
 	<!--<file src="..\..\src\ImagePointEditor\modules\_protected\ImagePointEditor\**" target="content\modules\_protected\ImagePointEditor\" />-->
 	<file src="..\..\src\ImagePointEditor\bin\Release\ImagePointEditor.dll" target="lib\net461" />
 
