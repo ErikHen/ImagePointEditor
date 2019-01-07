@@ -8,11 +8,15 @@ automatically use a focal point when image is resized.
 
 ## How to use
 Add a string property to your ImageData model. Decorate the property with the ImagePoint UI hint.
-<pre>
+````C#
 [UIHint(ImagePoint.UIHint)]
 [Display(Name = "Focal point")]
 public virtual string ImageFocalPoint { get; set; }
-</pre>
+````
+<br/>
+
+Now it's possible to place a point when editing an image in "All properties view":<br/>
+![Image poit gif](.\doc\ImagePoint.gif)
 
 The x and y values of the point is saved as a pipe (|) separated string, in the format &lt;x value&gt;|&lt;y value&gt;. The x and y values range from 0-1. 
 <br/>
