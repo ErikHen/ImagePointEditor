@@ -16,7 +16,7 @@ public virtual string ImageFocalPoint { get; set; }
 <br/>
 
 Now it's possible to place a point when editing an image in "All properties view":<br/>
-![Image poit gif](.\doc\ImagePoint.gif)
+![](.\doc\ImagePoint.gif?raw=true)
 
 The x and y values of the point is saved as a pipe (|) separated string, in the format &lt;x value&gt;|&lt;y value&gt;. The x and y values range from 0-1. 
 <br/>
