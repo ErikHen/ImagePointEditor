@@ -6,7 +6,7 @@
 trigger:
   branches:
     include:
-    - azure-pipelines
+    - azure-pipelines_test
   paths:
     exclude:
     - docs/*
@@ -32,6 +32,7 @@ steps:
     feedsToUse: 'config'
     nugetConfigPath: 'build/nuget/NuGet.config'
     restoreSolution: 'src/ImagePointEditor/packages.config'
+    solution: '$(solution)'
 
 #- task: VSBuild@1
 #  inputs:
