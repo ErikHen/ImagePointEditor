@@ -22,11 +22,14 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-#- task: NuGetToolInstaller@0
+- task: NuGetToolInstaller@0
+  inputs:
+    versionSpec: '4.8.0' 
 
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
+    feedsToUse: 'config'
     nugetConfigPath: 'build/nuget/NuGet.config'
     restoreSolution: 'src/ImagePointEditor/packages.config'
 
