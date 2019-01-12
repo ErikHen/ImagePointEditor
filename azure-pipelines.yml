@@ -28,7 +28,7 @@ steps:
   inputs:
     command: 'restore'
     nugetConfigPath: 'build/nuget/NuGet.config'
-    restoreSolution: 'src/ImagePointEditor/*.csproj'
+    restoreSolution: 'src/ImagePointEditor/packages.config'
 
 #- task: VSBuild@1
 #  inputs:
