@@ -3,7 +3,7 @@ This editor makes it possible to select a point on an image by clicking on the i
 Main purpose is to be able to set a focal point for an image, and use that focal point when the image is resized.
 <br/>
 The ImagePointEditor can be used together with the 
-[Picture helper in ImageProcessor.Web.Episerver](https://github.com/vnbaaij/ImageProcessor.Web.Episerver#picture-helper) to 
+[Picture helper in ImageProcessor.Web.Episerver](https://hacksbyme.net/2019/01/17/control-the-cropping-of-your-images-with-a-focal-point/) to 
 automatically use a focal point when image is resized.
 
 ## How to use
