@@ -123,10 +123,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="modules\_protected\ImagePointEditor\1\ClientResources\dot.png" />
-    <Content Include="modules\_protected\ImagePointEditor\1\ClientResources\ImagePointProperty.html" />
-    <Content Include="modules\_protected\ImagePointEditor\1\ClientResources\ImagePointProperty.js" />
-    <Content Include="modules\_protected\ImagePointEditor\1\ClientResources\trash.png" />
+    <Content Include="modules\_protected\ImagePointEditor\1.0.1\ClientResources\dot.png" />
+    <Content Include="modules\_protected\ImagePointEditor\1.0.1\ClientResources\ImagePointProperty.html" />
+    <Content Include="modules\_protected\ImagePointEditor\1.0.1\ClientResources\ImagePointProperty.js" />
+    <Content Include="modules\_protected\ImagePointEditor\1.0.1\ClientResources\styles.css" />
+    <Content Include="modules\_protected\ImagePointEditor\1.0.1\ClientResources\trash.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="modules\_protected\ImagePointEditor\module.config">
