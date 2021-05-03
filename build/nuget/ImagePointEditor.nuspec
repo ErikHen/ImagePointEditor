@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ImagePointEditor</id>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <authors>Erik Henningson</authors>
     <owners>Erik Henningson</owners>
 	<projectUrl>https://github.com/ErikHen/ImagePointEditor</projectUrl>
