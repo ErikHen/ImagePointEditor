@@ -50,7 +50,7 @@ When the nuget is added the following changes are made to you solution
 
 ## Version history
 #### V1.0.1
-- Fixed edge-case "path issue" (issue [#3](https://github.com/ErikHen/ImagePointEditor/issues/5)).
+- Fixed edge-case "path issue" (issue [#5](https://github.com/ErikHen/ImagePointEditor/issues/5)).
 
 #### V1.0.0
 - Initial version.
