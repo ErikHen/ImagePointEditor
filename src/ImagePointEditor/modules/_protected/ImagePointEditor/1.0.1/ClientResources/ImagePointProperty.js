@@ -7,7 +7,8 @@ define([
 
     "dojo/text!./ImagePointProperty.html",
     "dojo/dom",
-    "dojo/domReady!"
+    "dojo/domReady!",
+    "xstyle/css!./styles.css"
 ],
     function (
         declare,
