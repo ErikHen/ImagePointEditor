@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ImagePointEditor</id>
+    <version>1.0.1</version>
+    <authors>Erik Henningson</authors>
+    <owners>Erik Henningson</owners>
+	<projectUrl>https://github.com/ErikHen/ImagePointEditor</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Image point property editor for Episerver CMS</description>
+    <iconUrl>https://github.com/ErikHen/ImagePointEditor/blob/master/build/nuget/nugetIcon.png?raw=true</iconUrl>
+    <releaseNotes></releaseNotes>
+    <tags>Episerver ImageProcessor Focal point Resize</tags>
+    <dependencies>
+	    <dependency id="EPiServer.CMS.UI.Core" version="[11.1, 12.0)" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="..\output\ImagePointEditor.zip" target="content\modules\_protected\ImagePointEditor\" />
+	<file src="..\..\src\ImagePointEditor\bin\Release\ImagePointEditor.dll" target="lib\net461" />
+
+	<file src="..\web.config.install.xdt" target="content" />
+    <file src="..\web.config.uninstall.xdt" target="content" />
+  </files>
+</package>

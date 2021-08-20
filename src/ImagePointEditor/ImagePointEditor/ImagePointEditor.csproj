@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="modules\_protected\ImagePointEditor\2.0.0\ClientResources\dot.png" />
+    <None Remove="modules\_protected\ImagePointEditor\2.0.0\ClientResources\ImagePointProperty.html" />
+    <None Remove="modules\_protected\ImagePointEditor\2.0.0\ClientResources\ImagePointProperty.js" />
+    <None Remove="modules\_protected\ImagePointEditor\2.0.0\ClientResources\styles.css" />
+    <None Remove="modules\_protected\ImagePointEditor\2.0.0\ClientResources\trash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="modules\_protected\ImagePointEditor\2.0.0\ClientResources\dot.png" />
+    <Content Include="modules\_protected\ImagePointEditor\2.0.0\ClientResources\ImagePointProperty.html" />
+    <Content Include="modules\_protected\ImagePointEditor\2.0.0\ClientResources\ImagePointProperty.js" />
+    <Content Include="modules\_protected\ImagePointEditor\2.0.0\ClientResources\styles.css" />
+    <Content Include="modules\_protected\ImagePointEditor\2.0.0\ClientResources\trash.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="modules\_protected\ImagePointEditor\module.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+
+</Project>

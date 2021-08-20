@@ -1,0 +1,15 @@
+﻿.iptrash {
+    background-image: url(trash.png);
+    width: 11px;
+    height: 13px;
+    margin-top: 2px;
+    float: right;
+    cursor: pointer
+}
+.ipdot {
+    background-image: url(dot.png);
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    display: none;
+}
