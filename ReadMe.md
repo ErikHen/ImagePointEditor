@@ -1,9 +1,10 @@
-﻿# Episerver image point property editor
+﻿# Optimizely/Episerver CMS image point property editor
 This editor makes it possible to select a point on an image by clicking on the image.<br/> 
 Main purpose is to be able to set a focal point for an image, and use that focal point when the image is resized.
 <br/>
 The ImagePointEditor can be used together with the 
-[Picture helper in ImageProcessor.Web.Episerver](https://hacksbyme.net/2019/01/17/control-the-cropping-of-your-images-with-a-focal-point/) to 
+[Picture helper](https://hacksbyme.net/2019/01/17/control-the-cropping-of-your-images-with-a-focal-point/) for CMS 11, 
+and [PictureRenderer](https://github.com/ErikHen/PictureRenderer.Optimizely) for CMS12, to 
 automatically use a focal point when image is resized.
 
 ## How to use
@@ -27,12 +28,10 @@ Ex:<br/>
 0.5|0 = center top  <br/>
 
 ## How to install
-Easiest is to add nuget from the [EPiServer Nuget Feed](http://nuget.episerver.com/):
+Add nuget from the [Optimizely Nuget Feed](https://nuget.optimizely.com/package/?id=ImagePointEditor):
 
 `Install-Package ImagePointEditor`
 
-But if you don't want your solution to be dependent on some random guy's nuget package 🙂, 
-it's' fairly easy to add all the parts manually.
 
 ### Changes made to your solution
 When the nuget is added the following changes are made to you solution
