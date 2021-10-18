@@ -1,19 +1,34 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>2.0.0-preview</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Version>2.0.0</Version>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Erik Henningson</Authors>
     <Company />
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <AssemblyVersion>0.2.0.0</AssemblyVersion>
-    <FileVersion>0.2.0.0</FileVersion>
-    <Description>Image point property editor for Optimizely/Episerver. Main usage is to be able to set an image focal point.</Description>
+    <Description>Image point property editor for Optimizely/Episerver CMS. Main usage is to be able to set an image focal point.</Description>
     <PackageProjectUrl>https://github.com/ErikHen/ImagePointEditor</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/ErikHen/ImagePointEditor/master/build/nuget/nugetIcon.png</PackageIconUrl>
   </PropertyGroup>
 
+ 
+  
+  <!--The .props file triggers msbuild to move the file during build. When uninstalling the nuget, the zip file is not deleted, unfortunately.
+   See also https://stackoverflow.com/questions/64160274/including-a-folder-in-nuget-package-and-have-it-install-into-project-as-file-ne/64167211#64167211-->
   <ItemGroup>
-    <ProjectReference Include="..\src\ImagePointEditor.Core\ImagePointEditor.Core.csproj" />
+    <None Include="build\*.*" Pack="true" PackagePath="build"></None>
   </ItemGroup>
+
+  
+  <ItemGroup>
+    <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2, 13)" />
+  </ItemGroup>
+  
+  
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\*' -DestinationPath '$(SolutionDir)src\ImagePointEditor\build\ImagePointEditor.zip' -Force)" />
+  </Target>
 
 </Project>

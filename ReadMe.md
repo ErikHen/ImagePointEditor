@@ -28,28 +28,27 @@ Ex:<br/>
 0.5|0 = center top  <br/>
 
 ## How to install
-Add nuget from the [Optimizely Nuget Feed](https://nuget.optimizely.com/package/?id=ImagePointEditor):
 
-`Install-Package ImagePointEditor`
+Add [ImagePointEditor](https://nuget.optimizely.com/package/?id=ImagePointEditor) nuget from the  Optimizely Nuget Feed.
 
+#### Configuration
+For CMS 12 you need to add the following code to `ConfigureServices` in your `Startup.cs` file.
 
-### Changes made to your solution
-When the nuget is added the following changes are made to you solution
-* Add reference to ImagePointEditor.dll, which only contains the EditorDescriptor/UIHint.
-* Add the Dojo module in the `modules\_protected` folder
-* Add module in Web.config:
-````XML
-<episerver.shell>
-    <protectedModules>
-        <add name="ImagePointEditor" />
-    </protectedModules>
-</episerver.shell>
+````C#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddImagePointEditor();
+    ...
+}
 ````
 <br/><br/>
 
 ## Version history
-#### V1.0.1
+#### 2.0.0
+- New version for Optimizely CMS 12
+
+#### 1.0.1
 - Fixed edge-case "path issue" (issue [#5](https://github.com/ErikHen/ImagePointEditor/issues/5)).
 
-#### V1.0.0
+#### 1.0.0
 - Initial version.

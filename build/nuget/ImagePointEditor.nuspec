@@ -1,25 +1,27 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>ImagePointEditor.Core</id>
-    <version>2.0.0-preview</version>
+    <id>ImagePointEditor</id>
+    <version>2.0.0-prev35</version>
     <authors>Erik Henningson</authors>
     <owners>Erik Henningson</owners>
-	<projectUrl>https://github.com/ErikHen/ImagePointEditor</projectUrl>
+    <projectUrl>https://github.com/ErikHen/ImagePointEditor</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Image point property editor for Optimizely/Episerver CMS. </description>
-    <iconUrl>https://github.com/ErikHen/ImagePointEditor/blob/master/build/nuget/nugetIcon.png?raw=true</iconUrl>
+    <description>Image point property editor for Optimizely/Episerver CMS. Main usage is to be able to set an image focal point.</description>
+    <iconUrl>https://raw.githubusercontent.com/ErikHen/ImagePointEditor/master/build/nuget/nugetIcon.png</iconUrl>
     <releaseNotes></releaseNotes>
-    <tags>CMS Image Focal Point Resize</tags>
+    <tags>Image Focal Point Resize Picture PictureRenderer</tags>
     <dependencies>
-	    <!--<dependency id="EPiServer.CMS.UI.Core" version="[12.0, 13.0)" />-->
+	<group targetFramework="net5.0">
+        <dependency id="EPiServer.CMS.UI.Core" version="[12.0.2, 13.0.0)" />
+      </group>
     </dependencies>
+    <contentFiles>
+      <files include="any/any/modules/_protected/ImagePointEditor/ImagePointEditor.zip" buildAction="None" copyToOutput="true" />
+    </contentFiles>
   </metadata>
   <files>
-	<file src="..\output\ImagePointEditor.zip" target="content\modules\_protected\ImagePointEditor\" />
-	<file src="..\..\src\ImagePointEditor\bin\Release\ImagePointEditor.dll" target="lib\net5.0" />
-
-	<!--<file src="..\web.config.install.xdt" target="content" />
-    <file src="..\web.config.uninstall.xdt" target="content" />-->
+	<file src="..\output\ImagePointEditor.zip" target="contentFiles\any\any\modules\_protected\ImagePointEditor\" />
+	<file src="..\..\src\ImagePointEditor\bin\Release\net5.0\ImagePointEditor.dll" target="lib\net5.0" />
   </files>
 </package>
