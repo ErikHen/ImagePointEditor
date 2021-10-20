@@ -44,6 +44,9 @@ public void ConfigureServices(IServiceCollection services)
 <br/><br/>
 
 ## Version history
+#### 2.0.1
+- Fix issue with how nuget was created.
+
 #### 2.0.0
 - New version for Optimizely CMS 12
 

@@ -1,7 +1,7 @@
 ﻿<Project>
   <Target Name="CopyFiles" BeforeTargets="Build">
     <ItemGroup>     
-      <File Include="$(MSBuildThisFileDirectory)..\build\ImagePointEditor.zip"></File>          
+      <File Include="$(MSBuildThisFileDirectory)..\contentfiles\any\net5.0\modules\_protected\ImagePointEditor\ImagePointEditor.zip"></File>          
     </ItemGroup>
     <Copy SourceFiles="@(File)" DestinationFolder="$(MSBuildProjectDirectory)\modules\_protected\ImagePointEditor"></Copy>
   </Target>
