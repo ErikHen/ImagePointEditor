@@ -10,7 +10,7 @@
     <Company />
     <Description>Image point property editor for Optimizely/Episerver CMS. Main usage is to be able to set an image focal point.</Description>
     <PackageProjectUrl>https://github.com/ErikHen/ImagePointEditor</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/ErikHen/ImagePointEditor/master/build/nuget/nugetIcon.png</PackageIconUrl>
+    <PackageIcon>nugetIcon.png</PackageIcon>  
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,13 +26,14 @@
    See also https://stackoverflow.com/questions/64160274/including-a-folder-in-nuget-package-and-have-it-install-into-project-as-file-ne/64167211#64167211-->
   <ItemGroup>
     <None Include="build\ImagePointEditor.props" Pack="true" PackagePath="build"></None>
+    <None Include="..\..\images\nugetIcon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   
   <ItemGroup>
     <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2, 13)" />
   </ItemGroup>
-  
+
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\*' -DestinationPath '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\ImagePointEditor.zip' -Force)" />
