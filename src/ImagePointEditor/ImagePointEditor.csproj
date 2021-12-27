@@ -2,9 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyVersion>2.0.1.0</AssemblyVersion>
-    <FileVersion>2.0.1.0</FileVersion>
-    <Version>2.0.1</Version>
+    <AssemblyVersion>2.0.2.0</AssemblyVersion>
+    <FileVersion>2.0.2.0</FileVersion>
+    <Version>2.0.2</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>Erik Henningson</Authors>
     <Company />
@@ -14,11 +14,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="modules\_protected\ImagePointEditor\ImagePointEditor.zip" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="modules\_protected\ImagePointEditor\ImagePointEditor.zip" />
+    <None Remove="build\ImagePointEditor.zip" />
   </ItemGroup>
 
 
@@ -26,6 +22,7 @@
    See also https://stackoverflow.com/questions/64160274/including-a-folder-in-nuget-package-and-have-it-install-into-project-as-file-ne/64167211#64167211-->
   <ItemGroup>
     <None Include="build\ImagePointEditor.props" Pack="true" PackagePath="build"></None>
+	<None Include="build\ImagePointEditor.zip" Pack="true" PackagePath="build"></None>
   </ItemGroup>
 
   
@@ -35,7 +32,7 @@
   
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\*' -DestinationPath '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\ImagePointEditor.zip' -Force)" />
+    <Exec Command="if $(ConfigurationName) == Release (powershell Compress-Archive -Path '$(SolutionDir)src\ImagePointEditor\modules\_protected\ImagePointEditor\*' -DestinationPath '$(SolutionDir)src\ImagePointEditor\build\ImagePointEditor.zip' -Force)" />
   </Target>
 
 </Project>
