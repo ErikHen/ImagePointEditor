@@ -7,7 +7,8 @@ define([
 
     "dojo/text!./ImagePointProperty.html",
     "dojo/dom",
-    "dojo/domReady!"
+    "dojo/domReady!",
+    "xstyle/css!./styles.css"
 ],
     function (
         declare,
@@ -24,13 +25,7 @@ define([
 
                 _setValueAttr: function (val) {
                     this.previewImage.src = this._currentContext.previewUrl;
-                   // if (val) {
-                        this.value = val;
-
-                   // }
-                   // else {
-                   //     this.value = "0.5|0.5";
-                    //}
+                    this.value = val;
                     this._set('value', this.value);
                     this._showInfo();
                     

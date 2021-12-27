@@ -44,6 +44,10 @@ public void ConfigureServices(IServiceCollection services)
 <br/><br/>
 
 ## Version history
+#### 2.0.2
+- Optimize nuget size (Thanks [@zunkas](https://github.com/zunkas)).
+- More fail-safe icon references.
+
 #### 2.0.1
 - Fix issue with how nuget was created.
 
