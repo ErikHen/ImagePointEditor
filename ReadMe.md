@@ -44,6 +44,11 @@ public void ConfigureServices(IServiceCollection services)
 <br/><br/>
 
 ## Version history
+#### 2.1.0
+- More robust way to copy the module.
+- Targeting both .Net5 & .Net6.
+ Thanks [David](https://github.com/ddprince-yaksa)
+
 #### 2.0.2
 - Optimize nuget size (Thanks [@zunkas](https://github.com/zunkas)).
 - More fail-safe icon references.
