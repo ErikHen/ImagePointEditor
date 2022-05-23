@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ClientResources Include="$(ProjectDir)ClientResources\**\*"/>
+    </ItemGroup>
+    <PropertyGroup>
+        <TmpOutDir>$([System.IO.Path]::Combine($(ProjectDir), 'tmp'))</TmpOutDir>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="$(MSBuildProjectName).zip">
+            <Pack>true</Pack>
+            <PackagePath>contentFiles\any\any\modules\_protected\$(MSBuildProjectName)</PackagePath>
+            <BuildAction>None</BuildAction>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+        <Content Include="msbuild\CopyZipFiles.targets" >
+            <Pack>true</Pack>
+            <PackagePath>build\$(MSBuildProjectName).targets</PackagePath>
+        </Content>
+        <None Include="..\..\License.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CreateImagePointZip" BeforeTargets="Build">
+    <Copy SourceFiles="$(ProjectDir)module.config" DestinationFolder="$(TmpOutDir)\content"/>
+    <Copy SourceFiles="@(ClientResources)" DestinationFiles="@(ClientResources -> '$(TmpOutDir)\content\$(PackageVersion)\ClientResources\%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+    <!-- Update the module config with the version information -->
+    <XmlPoke XmlInputPath="$(TmpOutDir)\content\module.config" Query="/module/@clientResourceRelativePath" Value="$(PackageVersion)"/>
+  </Target>
+  <Target Name="ZipClientResources" BeforeTargets="Build" AfterTargets="CreateImagePointZip" DependsOnTargets="CreateImagePointZip">
+    <ZipDirectory SourceDirectory="$(TmpOutDir)\content" DestinationFile="$(ProjectDir)$(MSBuildProjectName).zip" Overwrite="true"/>
+  </Target>
+  <Target Name="CleanupTmpOutDir" BeforeTargets="Build" AfterTargets="ZipClientResources" DependsOnTargets="ZipClientResources">
+    <RemoveDir Directories="$(TmpOutDir)"/>
+  </Target>
+</Project>
