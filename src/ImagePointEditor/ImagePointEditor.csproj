@@ -1,27 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+		<Version>2.1.0</Version>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Authors>Erik Henningson</Authors>
+		<Company />
+		<Description>Image point property editor for Optimizely/Episerver CMS. Main usage is to be able to set an image focal point.</Description>
+		<PackageProjectUrl>https://github.com/ErikHen/ImagePointEditor</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/ErikHen/ImagePointEditor/master/build/nuget/nugetIcon.png</PackageIconUrl>
+	</PropertyGroup>
 
-  <PropertyGroup>
-    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
-    <FileVersion>2.1.0.0</FileVersion>
-    <Version>2.1.0</Version>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Authors>Erik Henningson</Authors>
-    <Company />
-    <Description>Image point property editor for Optimizely/Episerver CMS. Main usage is to be able to set an image focal point.</Description>
-    <PackageProjectUrl>https://github.com/ErikHen/ImagePointEditor</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/ErikHen/ImagePointEditor/master/build/nuget/nugetIcon.png</PackageIconUrl>
-  </PropertyGroup>
+	<ItemGroup>
+		<None Remove="build\ImagePointEditor.zip" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Remove="build\ImagePointEditor.zip" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2,13.0)" />
-  </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
-    <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.4.0,13.0)" />
-  </ItemGroup>
-
+	<ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+		<PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2,13.0)" />
+	</ItemGroup>
+	<ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+		<PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.4.0,13.0)" />
+	</ItemGroup>
 </Project>

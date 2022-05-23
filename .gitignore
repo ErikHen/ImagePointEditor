@@ -264,3 +264,4 @@ __pycache__/
 /samples/Alloy11.1/modules/_protected/EpiImagePoint
 /build/output/ImagePointEditor.zip
 !/build/output/*.nupkg
+/src/ImagePointEditor/ImagePointEditor.zip
