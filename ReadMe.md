@@ -44,6 +44,9 @@ public void ConfigureServices(IServiceCollection services)
 <br/><br/>
 
 ## Version history
+#### 2.2.0
+- Targeting .Net6 + .Net7. Dropping support for .Net5.<br>
+ 
 #### 2.1.0
 - More robust way to copy the module.
 - Targeting both .Net5 & .Net6.<br>
