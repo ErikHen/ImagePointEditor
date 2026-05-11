@@ -44,6 +44,11 @@ public void ConfigureServices(IServiceCollection services)
 <br/><br/>
 
 ## Version history
+#### 3.0.0
+- New version for Optimizely CMS 13
+- Targets .NET 10
+- Minor styling improvements
+
 #### 2.2.0
 - Targeting .Net6 + .Net7. Dropping support for .Net5.<br>
  
