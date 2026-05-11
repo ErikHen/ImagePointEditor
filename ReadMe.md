@@ -32,7 +32,7 @@ Ex:<br/>
 Add [ImagePointEditor](https://nuget.optimizely.com/package/?id=ImagePointEditor) nuget from the  Optimizely Nuget Feed.
 
 #### Configuration
-For CMS 12 you need to add the following code to `ConfigureServices` in your `Startup.cs` file.
+For CMS v12/v13 you need to add the following code to `ConfigureServices` in your `Startup.cs` file.
 
 ````C#
 public void ConfigureServices(IServiceCollection services)
@@ -47,7 +47,8 @@ public void ConfigureServices(IServiceCollection services)
 #### 3.0.0
 - New version for Optimizely CMS 13
 - Targets .NET 10
-- Minor styling improvements
+- Minor styling improvements<br>
+  Thanks [Jacob](https://github.com/jacobjones)!
 
 #### 2.2.0
 - Targeting .Net6 + .Net7. Dropping support for .Net5.<br>
@@ -55,10 +56,10 @@ public void ConfigureServices(IServiceCollection services)
 #### 2.1.0
 - More robust way to copy the module.
 - Targeting both .Net5 & .Net6.<br>
- Thanks [David](https://github.com/ddprince-yaksa)
+ Thanks [David](https://github.com/ddprince-yaksa)!
 
 #### 2.0.2
-- Optimize nuget size (Thanks [@zunkas](https://github.com/zunkas)).
+- Optimize nuget size (Thanks [@zunkas](https://github.com/zunkas)!).
 - More fail-safe icon references.
 
 #### 2.0.1
